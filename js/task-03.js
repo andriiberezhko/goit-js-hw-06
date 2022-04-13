@@ -12,3 +12,25 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('ul.gallery');
+
+
+// Вариант №1
+
+// const makeImageGallery = images.map((element) => {
+//   return `<li> <img src=${element.url}, alt=${element.alt}> </li>`;
+// });
+
+// galleryEl.insertAdjacentHTML("afterbegin", makeImageGallery.join(" "));
+
+// Вариант №2
+
+const makeImageEL = ({url, alt})=> {
+   return `<li><img src=${url}, alt=${alt}></li>`
+ };
+
+const makeImageGallery = images.map(makeImageEL).join(" ");
+
+galleryEl.insertAdjacentHTML("afterbegin", makeImageGallery);
+
