@@ -11,7 +11,9 @@ const textColor = document.querySelector('.color');
 chageColorBtn.addEventListener('click', onChangeColor);
 
 function onChangeColor() {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  textColor.textContent = getRandomHexColor();
+  const color = getRandomHexColor()
+  bodyEl.style.backgroundColor = color;
+  textColor.textContent = color;
+  
 }
 
