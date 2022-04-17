@@ -28,7 +28,7 @@ const galleryEl = document.querySelector('ul.gallery');
 
 const makeImageEL = ({ url, alt }) => {
   
-   return `<li><img src=${url}, alt='${alt}'></li>`
+   return `<li><img src='${url}', alt='${alt}'></li>`
  };
 
 const makeImageGallery = images.map(makeImageEL).join(" ");
